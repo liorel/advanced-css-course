@@ -99,20 +99,16 @@ body {
 }
 
 .btn {
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  transition: all 0.2s ease-out;
-  border-radius: 10rem;
-  position: relative;
-  font-size: 1.6rem;
-
-  &:link {
-    @extend .btn;
-  }
+  &:link,
   &:visited {
-    @extend .btn;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    transition: all 0.2s ease-out;
+    border-radius: 10rem;
+    position: relative;
+    font-size: 1.6rem;
   }
 
   &--animated {
@@ -122,6 +118,11 @@ body {
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
 
   &:active {
@@ -132,6 +133,10 @@ body {
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+
+    &::after {
+      background-color: $color-white;
+    }
   }
 
   &::after {
@@ -145,15 +150,6 @@ body {
     left: 0;
     z-index: -1;
     transition: all 0.4s ease-in-out;
-  }
-
-  &--white::after {
-    background-color: $color-white;
-  }
-
-  &:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
   }
 }
 

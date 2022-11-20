@@ -83,7 +83,7 @@ body {
           animation: moveInRight 1s ease-out;
 }
 
-.btn, .btn:visited, .btn:link {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1.5rem 4rem;
@@ -103,6 +103,10 @@ body {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
@@ -111,7 +115,10 @@ body {
   background-color: #fff;
   color: #777;
 }
-.btn::after, .btn:link::after, .btn:visited::after {
+.btn--white::after {
+  background-color: #fff;
+}
+.btn::after {
   content: "";
   display: inline-block;
   width: 100%;
@@ -122,13 +129,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s ease-in-out;
-}
-.btn--white::after {
-  background-color: #fff;
-}
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 
 @-webkit-keyframes moveInLeft {
