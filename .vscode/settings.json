@@ -2,7 +2,18 @@
   "liveServer.settings.port": 5501,
   "editor.fontSize": 16,
   "css.validate": false,
-  "scss.validate": false,
-  "less.validate": false,
-  "editor.wordWrap": "on"
+  "scss.validate": true,
+  "less.validate": true,
+  "editor.wordWrap": "on",
+  "workbench.colorTheme": "Oceanic Next (dimmed bg)",
+  "files.autoSave": "onFocusChange",
+  "editor.minimap.enabled": false,
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": true,
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#333333",
+    "statusBar.noFolderBackground": "#333333",
+    "statusBar.debuggingBackground": "#263238"
+  }
 }
